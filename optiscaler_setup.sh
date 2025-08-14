@@ -280,8 +280,8 @@ make_dxvk_conf() {
   } > "$cfg"
 
   log "Wrote ${cfg}"
-  echo "Steam (Proton) launch options hint (adjust path if needed):"
-  echo '  DXVK_CONFIG_FILE="$PWD/dxvk.conf" %command%'
+  echo "Steam (Proton) launch options hint including RDNA3 spoof (adjust path if needed):"
+  echo '  DXVK_CONFIG_FILE="$PWD/dxvk.conf" DXIL_SPIRV_CONFIG=wmma_rdna3_workaround FSR4_UPGRADE=1 %command%'
 }
 
 # Invoke the dxvk.conf helper
