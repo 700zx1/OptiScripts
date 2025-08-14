@@ -282,6 +282,7 @@ make_dxvk_conf() {
   log "Wrote ${cfg}"
   echo "Steam (Proton) launch options hint including RDNA3 spoof (adjust path if needed):"
   echo '  DXVK_CONFIG_FILE="$PWD/dxvk.conf" DXIL_SPIRV_CONFIG=wmma_rdna3_workaround FSR4_UPGRADE=1 %command%'
+  echo ' Be sure to use Proton-GE 10-4 or newer for FSR4 to work!'
 }
 
 # Invoke the dxvk.conf helper
